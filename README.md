@@ -16,3 +16,10 @@ A Python application which will help you with job searching.
     - am construit si configurat modul de lucru
     - am construit un sistem de fisiere -> scheletul proiectului
     - am inceput scrierea codului pentru scraper
+
+# 19.06.2024
+
+    - am reusit sa scriu codul pentru scraping
+    - am observat ca pentru fiecare site se aplica un pattern diferit pentru colectarea datelor
+    - am incercat cu cateva site-uri din tara si din strainatate si am fost destul de "norocos" ca primele mele incercari sa fie pe site-uri care imi detectau si respingeau activitatea (primeam eroare 403 => nu puteam sa iau datele)
+    - in cele din urma am reusit cu cateva site-uri, iar acum va urma etapa de procesare a datelor
