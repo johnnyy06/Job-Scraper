@@ -1,14 +1,18 @@
-from scraper.fetcher import fetch_page
+from .fetcher import fetch_page
 
-def parse_job_site1(soup):
-    jobs = []
-    for job in soup.find_all('div', class_='job-listing'):
-        title = job.find('h2').text
-        company = job.find('div', class_='company').text
-        location = job.find('div', class_='location').text
-        jobs.append({
-            'title': title,
-            'company': company,
-            'location': location
-        })
-    return jobs
+def get_job_site1(card):
+    atag = card.div.a
+    title = card.get('data-title')
+    employer = card.get('data-employer-name')
+
+    try:
+        salary = card.find('div', 'text-nowrap').text.strip()
+    except AttributeError:
+        salary = ''
+
+
+    job_url = atag.get('href')
+    job = (title, employer, salary, job_url)
+
+    # job -> variabila tupple care va contine titlul, companie, url-ul pentru job
+    return job

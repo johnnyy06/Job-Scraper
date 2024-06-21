@@ -1,6 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 
+
+def get_url(template, location, position):
+    url = template.format(location, position)
+    return url
+
+
 def fetch_page(url):
     response = requests.get(url)
     if response.status_code == 200:
