@@ -20,7 +20,7 @@ def fetch_all_cards(url):
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(5)  # Increase sleep time to ensure content loads
+        time.sleep(5)
         new_height = driver.execute_script("return document.body.scrollHeight")
         if new_height == last_height:
             break
@@ -30,15 +30,12 @@ def fetch_all_cards(url):
     driver.quit()
     return soup
 
-# Adjust the main function and URL as necessary
-
 def main():
     location = "brasov"
     position = "software-developer"
     template = "https://www.ejobs.ro/locuri-de-munca/{}/{}"
     url = template.format(location, position)
 
-    # Fetch all cards with Selenium
     soup = fetch_all_cards(url)
     # pentru verificare
     print(soup) # -> aici am tot codul html de pe site
@@ -47,11 +44,10 @@ def main():
     for i in soup.find_all('div', {'class': 'JobCard'}):
         print(i)
 
-    # Process the page as before
     cards = soup.find_all('div', 'JobCard')
     jobs = []
     for card in cards:
-        job = get_job_site2(card)  # Assuming get_job_site2 is defined to extract job info from a card
+        job = get_job_site2(card)
         jobs.append(job)
 
     for i in jobs:
