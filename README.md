@@ -29,3 +29,9 @@ A Python application which will help you with job searching.
     - am reusit sa parsez datele necesare pentru un site
     - in continuare (la urmatorul commit) vreau sa fac procesul pentru mai multe site-uri si sa-l generalizez pentru toate job-urile de un anumit fel de pe un site
     - urmeaza sa salvez datele gasite intr-un fisier de tip foaie de calcul
+
+# 21.06.2024
+
+    - am observat ca folosind tool-ul "requests" nu pot sa iau toate anunturile de job-uri de pe site-uri "dinamice" (care folosesc "lazy loading")
+    - am schimbat tactica si am incercat cu Selenium pentru a simula scroll down
+    - obtin tot codul html, dar cand trebuie sa impart in "Job Cards" (adica sa aleg job-urile, sa le individualizez), obtin doar o parte din totalul de rezultate
