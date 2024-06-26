@@ -1,9 +1,9 @@
 from .fetcher import fetch_page
 
 def get_job_site4(card):
-    atag = card.article.a
-    title = card.find('a', 'u-text-double-line').text.strip()
-    employer = card.find('dic', 'c-job-item__info-item').text.strip()
+    atag = card.div.a
+    title = card.find('h2', 'job-title').text.strip()
+    employer = card.find('p', 'company-name').text.strip()
 
     salary = ''
 

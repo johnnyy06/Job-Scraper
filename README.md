@@ -35,3 +35,9 @@ A Python application which will help you with job searching.
     - am marit aplicatia pentru a face scraping la mai multe site-uri
     - rezultatele le-am salvat intr-un fisier tip baza de date
     - urmeaza sa fac o interfata grafica pentru a chestiona baza de date si a intoarce rezultatele dorite
+
+# 26.06.2024
+
+    - am realizat interfata grafica
+    - aceasta ia rezultatele din baza de date si le afiseaza
+    - am rezolvat un bug pentru parsarea informatiilor de pe site-ul 3
