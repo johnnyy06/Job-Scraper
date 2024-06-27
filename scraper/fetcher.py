@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
+
 import time
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -19,7 +21,8 @@ def fetch_page(url):
     if response.status_code == 200:
         return BeautifulSoup(response.text, 'html.parser')
     else:
-        raise Exception(f"Failed to fetch page: {response.status_code}")
+        return ''
+        #raise Exception(f"Failed to fetch page: {response.status_code}")
     
     
     

@@ -41,3 +41,17 @@ A Python application which will help you with job searching.
     - am realizat interfata grafica
     - aceasta ia rezultatele din baza de date si le afiseaza
     - am rezolvat un bug pentru parsarea informatiilor de pe site-ul 3
+
+# 27.06.2024
+
+    - proiectul este finalizat
+    - am facut 2 variante
+    - prima presupune cautarea unui job dupa nume si locatie -> cand se apasa butonul "Cauta" va incepe cautarea pe internet si extragerea informatiilor de pe site-uri -> dupa un scurt timp (aproximativ 3 secunde) cautarea va intoarce rezultatele care vor fi afisate intr-o lista pentru utilizator
+    - a doua varianta presupune rularea script-ului de scraping pentru a extrage job-uri dintr-o lista de job-uri din diferite locatii (gasite tot intr-o lista) de pe diferite site-uri si salvarea acestora intr-o baza de date
+    - aceasta cautare va lua mai mult timp, motiv pentru care am decis ca aceasta componenta sa fie singulara (doar sa faca scraping-ul, sa caute job-urile si sa le salveze in baza de date)
+    - cea de-a doua componenta va fi un "motor de cautare" prin baza de date (va cauta un job dupa titlu, angajator, salariu si locatie)
+
+
+
+
+## Sfat: va trebui crea inca un folder numit "data" in care vor fi 2 fisiere: "jobs.csv" si "jobs.db"
