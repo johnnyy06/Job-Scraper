@@ -54,4 +54,4 @@ A Python application which will help you with job searching.
 
 
 
-## Sfat: va trebui crea inca un folder numit "data" in care vor fi 2 fisiere: "jobs.csv" si "jobs.db"
+## Sfat: va trebui creat inca un folder numit "data" in care vor fi 2 fisiere: "jobs.csv" si "jobs.db"
